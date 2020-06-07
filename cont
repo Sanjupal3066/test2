@@ -1,0 +1,10 @@
+pth=$(pwd)
+if docker ps -a | grep Supermarket
+then
+docker rm -f Supermarket
+fi
+docker run -dit -v $pth/mysql:/var/lib/mysql/ -p 43:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=SE --name Supermarket mysql:5.7
+IP=$(sudo hostname -I | awk '{print $2}')
+echo $IP
+echo "Use this IP while launching jar file"
+echo "Command example: java -jar SE.jar $IP"

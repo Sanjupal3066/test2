@@ -1,0 +1,17 @@
+NOTE: This project will work only in linux O.S
+
+Prerequisities:
+	1. JDK(1.8)
+	2. docker
+
+Steps(To run this Project):
+	1. Run "cont" file in the same O.S where your docker is running.
+		You can run this file using "bash cont".
+	2. Now find the IP of your O.S using "ifconfig" command.
+	3. Lastly run the "SE.jar" file and also pass the IP address as a argument.
+		Sample Command: "java -jar SE.jar 192.168.99.102"
+
+
+Login Info:
+	Username: admin
+	Password: admin1234
